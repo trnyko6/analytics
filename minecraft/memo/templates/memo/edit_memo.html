@@ -1,0 +1,30 @@
+<div>
+<a href="{% url 'memo:detail' memo.id %}">戻る</a>
+</div>
+
+<form action="{% url 'memo:edit_memo' memo.id %}" method="POST">{% csrf_token %}
+  <table>
+    <tr>
+      <th>title</th>
+      <td>{{ form.title }}</td>
+    </tr>
+    <tr>
+      <th>text</th>
+      <td>{{ form.text }}</td>
+    </tr>
+    <tr>
+      <th>coordinate_x</th>
+      <td>{{ form.coordinate_x }}</td>
+    </tr>
+    <tr>
+      <th>coordinate_y</th>
+      <td>{{ form.coordinate_y }}</td>
+    </tr>    
+    <tr>
+      <th>coordinate_z</th>
+      <td>{{ form.coordinate_z }}</td>
+    </tr>    
+
+  </table>
+  <button class="btn" type="submit">保存</button>
+</form>
