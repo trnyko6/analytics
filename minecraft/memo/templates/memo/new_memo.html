@@ -1,8 +1,0 @@
-<div>
-  <a href="{% url 'memo:index' %}">ホームに戻る</a>
-</div>
-
-<form action="{% url 'memo:new_memo' %}" method="POST">{% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit" class="btn">保存</button>
-</form>
